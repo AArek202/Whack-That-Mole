@@ -1,0 +1,267 @@
+@font-face {
+  font-family: GROBOLD;
+  src: url("..\Assets\Font\GROBOLD.ttf");
+}
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+table {
+  align-self: center;
+}
+tr td:not(:first-child) {
+  padding-left: 20px;
+}
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    120deg,
+    rgba(121, 168, 39, 1) 0%,
+    rgba(152, 204, 63, 1) 52%,
+    rgba(59, 149, 31, 1) 100%
+  );
+  z-index: -1;
+}
+#game_screen {
+  display: none;
+  margin: 0px;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  cursor: none;
+}
+#gameover {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+img {
+  position: absolute;
+  pointer-events: none;
+}
+img::selection {
+  background-color: transparent;
+}
+#tree {
+  right: 0px;
+  top: 0px;
+  pointer-events: none;
+}
+#ground {
+  bottom: -50px;
+  width: 100%;
+  pointer-events: none;
+}
+#bush {
+  bottom: -50px;
+  width: 800px;
+  left: -200px;
+  pointer-events: none;
+  z-index: 2;
+}
+#corner_logo {
+  right: 60px;
+  bottom: 50px;
+  width: 200px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 3;
+  transform: rotate(-15deg);
+}
+
+/* Main Menu */
+#menu_screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  transform: translate(0px, -100px);
+  font-size: xx-large;
+  font-family: GROBOLD;
+  color: #dbcb1a;
+  -webkit-text-stroke: 2px black;
+  /* cursor: none; */
+}
+#menu_logo {
+  position: unset;
+  width: 800px;
+}
+#plbtn {
+  width: 100px;
+  height: 100px;
+  font-size: xx-large;
+  font-family: GROBOLD;
+  background-color: transparent;
+  border: none;
+  color: #dbcb1a;
+  -webkit-text-stroke: 2px black;
+}
+
+#plbtn:hover {
+  font-size: xxx-large;
+}
+
+#menu_screen > span {
+  background-color: #3e2723;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* Game Screen  */
+#hammer {
+  position: absolute;
+  width: 200px;
+  transform: rotate(50deg);
+  z-index: 5;
+  pointer-events: none;
+}
+#bonk_img {
+  width: 100px;
+  display: none;
+  transform: rotate(-20deg);
+  z-index: 6;
+}
+.bonk {
+  animation: bonk 0.2s;
+}
+@keyframes bonk {
+  0% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+#score_time_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0px;
+  width: 600px;
+  height: 200px;
+  border-bottom-right-radius: 30px;
+  background-color: #5c2f1d;
+  font-family: GROBOLD;
+  font-size: 30px;
+  color: yellow;
+  pointer-events: none;
+}
+.hole-container {
+  position: relative;
+  width: 160px;
+  height: 110px;
+  overflow: hidden;
+  /* background-color: red; */
+  clip-path: ellipse(85% 100% at 80px 0px);
+  margin: auto;
+}
+
+.hole {
+  position: absolute;
+  width: 160px;
+  height: 60px;
+  background: #3e2723;
+  border-radius: 50%;
+  bottom: 0px;
+  box-shadow: inset 25px 20px 23px #5a403c;
+}
+.mole-container {
+  position: absolute;
+  width: 90px;
+  height: 110px;
+  left: 35px;
+  bottom: -100px;
+  transition: all 0.3s;
+  z-index: 2;
+  /* background-color: black; */
+}
+.mole {
+  width: 90px;
+  height: 110px;
+  transition: all 0.3s;
+  z-index: 1;
+  pointer-events: none;
+}
+.up {
+  transform: translateY(-100px);
+}
+
+/* Game over */
+#gameover {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 10;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  /* top: 0;
+            left: 0; */
+}
+#gvcard {
+  background-color: #fff;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  border: 5px solid rgb(67, 24, 3);
+  border-radius: 10px;
+  background: linear-gradient(
+    120deg,
+    rgba(121, 168, 39, 1) 0%,
+    rgba(152, 204, 63, 1) 52%,
+    rgba(59, 149, 31, 1) 100%
+  );
+}
+#gameover button {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  font-size: xx-large;
+  font-family: GROBOLD;
+  background-color: transparent;
+  border: none;
+  color: #dbcb1a;
+  -webkit-text-stroke: 2px rgb(67, 24, 3);
+}
+#gameover button:hover {
+  font-size: xxx-large;
+}
+
+#gameover h2 {
+  font-size: xxx-large;
+  font-family: GROBOLD;
+  color: #dbcb1a;
+  -webkit-text-stroke: 1px rgb(67, 24, 3);
+}
+#gameover h4 {
+  font-size: xx-large;
+  font-family: GROBOLD;
+  color: #dbcb1a;
+  -webkit-text-stroke: 1px rgb(67, 24, 3);
+  margin-bottom: 0;
+}
+#gvcard #new_high {
+  position: absolute;
+  top: -70px;
+  right: -30px;
+  transform: rotate(10deg);
+  background-color: #3e2723;
+  width: 100px;
+  height: 80px;
+  border-radius: 20px;
+}

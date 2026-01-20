@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Styles\styles.css" />
+  </head>
+  <body>
+    <!-- Mole Containers were used to increase hitbox of moles to make the game more enjoyable. -->
+    <audio id="bgMusic" src="Assets\Sounds\Bg.mp3" loop></audio>
+    <div id="background">
+      <img id="bush" src="Assets\Images\Bush.png" />
+      <img id="tree" src="Assets\Images\Tree.png" />
+      <img id="ground" src="Assets\Images\Ground.png" />
+      <img id="corner_logo" src="Assets\Images\Logo.png" />
+    </div>
+    <div id="menu_screen">
+      <img id="menu_logo" src="Assets\Images\Logo.png" />
+      <button id="plbtn">Play</button>
+      <span>Highscore : <span id="menu_highscore"></span></span>
+      <div id="timer-start">
+        <div id="timer-start-card"></div>
+      </div>
+    </div>
+
+    <div id="game_screen" style="display: none">
+      <audio id="bonk_sound" src="Assets\Sounds\Bonk.mp3"></audio>
+      <img id="hammer" src="Assets\Images\Hammer.png" />
+      <img id="bonk_img" src="Assets\Images\Bonk.png" />
+      <table>
+        <tr>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+
+              <div class="hole"></div>
+            </div>
+          </td>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+              <div class="hole"></div>
+            </div>
+          </td>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+              <div class="hole"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+              <div class="hole"></div>
+            </div>
+          </td>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+              <div class="hole"></div>
+            </div>
+          </td>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+              <div class="hole"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+              <div class="hole"></div>
+            </div>
+          </td>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+              <div class="hole"></div>
+            </div>
+          </td>
+          <td>
+            <div class="hole-container">
+              <div class="mole-container">
+                <img class="mole" src="Assets\Images\Moles\mole_1.png" />
+              </div>
+              <div class="hole"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <section id="score_time_container">
+        <span>Score: <span id="game_score"></span></span>
+        <span>Time: <span id="time"></span></span>
+      </section>
+    </div>
+
+    <div id="gameover" style="display: none">
+      <div id="gvcard">
+        <h4 id="new_high">New High</h4>
+        <div id="score">
+          <h2>Your Score</h2>
+          <h4 id="gvr_score"></h4>
+        </div>
+        <button id="restart_btn">Restart</button>
+        <br />
+        <button id="menu_btn">Main Menu</button>
+      </div>
+    </div>
+  </body>
+  <script src="Scripts/script.js"></script>
+</html>
