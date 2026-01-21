@@ -1,6 +1,6 @@
 @font-face {
   font-family: GROBOLD;
-  src: url("./Assets/Font/GROBOLD.ttf");
+  src: url("../Assets/Font/GROBOLD.ttf");
 }
 body {
   margin: 0px;
@@ -265,4 +265,5 @@ img::selection {
   height: 80px;
   border-radius: 20px;
 }
+
 
